@@ -1,0 +1,659 @@
+/* ============================================
+   Color Palette - Premium Leather Tones
+   ============================================ */
+:root {
+    --leather-dark: #4A3728;
+    --leather-medium: #6B5344;
+    --leather-tan: #8B6F47;
+    --leather-light: #A0774F;
+    --leather-beige: #C8986E;
+    --leather-cream: #D4A574;
+    --accent-gold: #C9A454;
+    --text-dark: #2D1F15;
+    --text-light: #666666;
+    --bg-light: #FAF7F2;
+    --bg-white: #FFFFFF;
+    --border: #E8DDD0;
+}
+
+/* ============================================
+   Reset and Base Styles
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* ============================================
+   Container
+   ============================================ */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 48px;
+    color: var(--text-dark);
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--text-dark);
+}
+
+h3 {
+    font-size: 20px;
+    color: var(--text-dark);
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+strong {
+    font-weight: 600;
+    color: var(--leather-medium);
+}
+
+/* ============================================
+   Buttons - Premium with Ripple Effect
+   ============================================ */
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.btn:active::before {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, var(--leather-medium) 0%, var(--leather-tan) 100%);
+    color: var(--bg-white);
+    border-color: var(--leather-medium);
+    box-shadow: 0 4px 15px rgba(75, 55, 40, 0.2);
+}
+
+.btn--primary:hover {
+    background: linear-gradient(135deg, var(--leather-dark) 0%, var(--leather-medium) 100%);
+    border-color: var(--leather-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(75, 55, 40, 0.3);
+}
+
+.btn--primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(75, 55, 40, 0.2);
+}
+
+.btn--primary:focus {
+    outline: 3px solid var(--leather-beige);
+    outline-offset: 2px;
+}
+
+.btn--secondary {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    border: 2px solid var(--leather-beige);
+    transition: all 0.3s ease;
+}
+
+.btn--secondary:hover {
+    background-color: var(--leather-cream);
+    border-color: var(--leather-tan);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(168, 119, 79, 0.2);
+}
+
+.btn--secondary:active {
+    transform: translateY(-1px);
+}
+
+.btn--secondary:focus {
+    outline: 3px solid var(--leather-beige);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
+    border-bottom: 3px solid var(--leather-cream);
+}
+
+.hero__title {
+    margin-bottom: 24px;
+    color: var(--text-dark);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.hero__subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--leather-medium);
+    background: linear-gradient(135deg, var(--leather-medium), var(--leather-tan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero__text {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    max-width: 600px;
+    color: var(--text-light);
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   Section Title
+   ============================================ */
+
+.section__title {
+    text-align: center;
+    margin-bottom: 48px;
+    color: var(--text-dark);
+    font-weight: 800;
+    font-size: 36px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--leather-cream), var(--leather-tan));
+    border-radius: 2px;
+}
+
+/* ============================================
+   Benefits Section
+   ============================================ */
+
+.benefits {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.benefit__card {
+    padding: 32px 24px;
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--leather-cream), var(--leather-tan), var(--leather-cream));
+    transition: left 0.4s ease;
+}
+
+.benefit__card:hover {
+    border-color: var(--leather-tan);
+    box-shadow: 0 12px 30px rgba(107, 83, 68, 0.15);
+    transform: translateY(-8px);
+}
+
+.benefit__card:hover::before {
+    left: 100%;
+}
+
+.benefit__title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--leather-medium);
+}
+
+.benefit__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+.benefits__cta {
+    text-align: center;
+}
+
+/* ============================================
+   Process Section
+   ============================================ */
+
+.process {
+    padding: 80px 0;
+    background-color: var(--bg-white);
+}
+
+.process__steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-bottom: 48px;
+}
+
+.step {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.step__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bg-white);
+    background: linear-gradient(135deg, var(--leather-medium) 0%, var(--leather-tan) 100%);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(107, 83, 68, 0.2);
+    transition: all 0.3s ease;
+}
+
+.step:hover .step__number {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(107, 83, 68, 0.3);
+}
+
+.step__title {
+    margin-bottom: 12px;
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.step__text {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.process__cta {
+    text-align: center;
+}
+
+/* ============================================
+   Contact Section
+   ============================================ */
+
+.contact {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+}
+
+.contact__text {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 32px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.contact__phone {
+    font-weight: 700;
+    color: var(--leather-medium);
+    text-decoration: none;
+    border-bottom: 2px solid var(--leather-cream);
+    transition: all 0.3s ease;
+}
+
+.contact__phone:hover {
+    color: var(--leather-tan);
+    border-bottom-color: var(--leather-tan);
+}
+
+.contact__buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.contact__note {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer {
+    padding: 32px 0;
+    background: linear-gradient(135deg, var(--leather-dark) 0%, var(--text-dark) 100%);
+    color: var(--bg-white);
+    text-align: center;
+}
+
+.footer__text {
+    font-size: 14px;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero__subtitle {
+        font-size: 18px;
+    }
+
+    .hero__text {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+
+    .section__title {
+        margin-bottom: 40px;
+        font-size: 28px;
+    }
+
+    .benefits {
+        padding: 60px 0;
+    }
+
+    .benefits__grid {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .process {
+        padding: 60px 0;
+    }
+
+    .process__steps {
+        gap: 32px;
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        text-align: left;
+        padding: 20px;
+        background-color: var(--bg-light);
+        border-radius: 8px;
+    }
+
+    .step__number {
+        margin-bottom: 16px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact__text {
+        font-size: 16px;
+    }
+
+    .contact__buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero__title {
+        margin-bottom: 16px;
+    }
+
+    .hero__subtitle {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .hero__text {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .hero__buttons {
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 15px;
+        border-radius: 6px;
+    }
+
+    .section__title {
+        font-size: 22px;
+        margin-bottom: 32px;
+    }
+
+    .section__title::after {
+        width: 40px;
+        height: 3px;
+    }
+
+    .benefits {
+        padding: 40px 0;
+    }
+
+    .benefits__grid {
+        gap: 16px;
+    }
+
+    .benefit__card {
+        padding: 24px 16px;
+        border-radius: 8px;
+    }
+
+    .benefit__title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .benefit__text {
+        font-size: 14px;
+    }
+
+    .process {
+        padding: 40px 0;
+    }
+
+    .process__steps {
+        gap: 24px;
+    }
+
+    .step {
+        padding: 16px;
+    }
+
+    .step__number {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .contact {
+        padding: 40px 0;
+    }
+
+    .contact__text {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .contact__buttons {
+        gap: 10px;
+    }
+
+    .footer__text {
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
