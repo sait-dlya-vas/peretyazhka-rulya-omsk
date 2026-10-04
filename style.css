@@ -568,7 +568,7 @@ strong {
     }
 
     .hero__text {
-        font-size: 15px;
+        font-size: 16px;
         margin-bottom: 24px;
     }
 
@@ -577,9 +577,13 @@ strong {
     }
 
     .btn {
-        padding: 12px 20px;
-        font-size: 15px;
+        padding: 14px 20px;
+        font-size: 16px;
         border-radius: 6px;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .section__title {
@@ -611,7 +615,7 @@ strong {
     }
 
     .benefit__text {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .process {
@@ -637,7 +641,7 @@ strong {
     }
 
     .contact__text {
-        font-size: 15px;
+        font-size: 16px;
         margin-bottom: 24px;
     }
 
@@ -646,7 +650,7 @@ strong {
     }
 
     .footer__text {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
