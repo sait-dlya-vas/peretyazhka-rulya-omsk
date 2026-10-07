@@ -14,7 +14,6 @@
     --bg-light: #FAF7F2;
     --bg-white: #FFFFFF;
     --border: #E8DDD0;
-    --hero-bg: #2A1D14;
 }
 
 /* ============================================
@@ -193,41 +192,14 @@ strong {
    ============================================ */
 
 .hero {
-    position: relative;
-    overflow: hidden;
-    padding: 96px 0;
-    background-color: var(--hero-bg);
-    border-bottom: 3px solid var(--accent-gold);
-}
-
-/* Фото руля после перетяжки (Hyundai Creta) – проявляется справа из темноты */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 58%;
-    background: url('images/portfolio/creta-after.jpg') center 62% / cover no-repeat;
-    filter: brightness(0.85) saturate(0.9);
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
-    mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
-}
-
-.hero .container {
-    position: relative;
-    z-index: 1;
-}
-
-.hero__title,
-.hero__subtitle,
-.hero__text {
-    max-width: 560px;
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
+    border-bottom: 3px solid var(--leather-cream);
 }
 
 .hero__title {
     margin-bottom: 24px;
-    color: var(--bg-light);
+    color: var(--text-dark);
     font-weight: 800;
     letter-spacing: -0.5px;
 }
@@ -236,26 +208,19 @@ strong {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 16px;
-    color: var(--accent-gold);
+    color: var(--leather-medium);
+    background: linear-gradient(135deg, var(--leather-medium), var(--leather-tan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero__text {
     font-size: 18px;
     margin-bottom: 40px;
     line-height: 1.7;
-    color: var(--border);
-}
-
-.hero .btn--primary {
-    background: var(--accent-gold);
-    border-color: var(--accent-gold);
-    color: var(--text-dark);
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
-}
-
-.hero .btn--primary:hover {
-    background: var(--leather-cream);
-    border-color: var(--leather-cream);
+    max-width: 600px;
+    color: var(--text-light);
 }
 
 .hero__buttons {
@@ -665,16 +630,6 @@ strong {
 
     .hero {
         padding: 60px 0;
-    }
-
-    /* На телефоне фото лежит под всем текстом, сильно затемнённое */
-    .hero::before {
-        width: 100%;
-        background-position: center 55%;
-        filter: brightness(0.85) saturate(0.9);
-        opacity: 0.32;
-        -webkit-mask-image: none;
-        mask-image: none;
     }
 
     .hero__subtitle {
