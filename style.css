@@ -428,6 +428,63 @@ strong {
     margin-top: 0;
 }
 
+.portfolio__grid--pairs {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+    gap: 28px;
+}
+
+.pair__photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    background-color: var(--leather-dark);
+}
+
+.pair__photo {
+    position: relative;
+    margin: 0;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+}
+
+.pair__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pair__label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #fff;
+    background: rgba(40, 28, 20, 0.75);
+}
+
+.pair__label--after {
+    background: var(--accent-gold);
+    color: var(--leather-dark);
+}
+
+.pair__caption {
+    padding: 16px 20px;
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.pair__caption strong {
+    display: block;
+    color: var(--leather-medium);
+    font-size: 18px;
+}
+
 /* ============================================
    Process Section
    ============================================ */
