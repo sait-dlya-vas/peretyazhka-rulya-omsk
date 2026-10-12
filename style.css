@@ -812,6 +812,11 @@ strong {
         grid-template-columns: 1fr;
     }
 
+    /* На телефоне карточки в один столбец – экокожа выравнивается как все */
+    .benefit__card--wide {
+        text-align: left;
+    }
+
     .process {
         padding: 60px 0;
     }
